@@ -573,7 +573,7 @@
               }
             },
             "sources": {
-              "/opt/ratpack-bubblesort": "https://github.com/tylerjromeo/ratpack-bubblesort-service/tarball/master"
+              "/opt/ratpack-bubblesort": "https://github.com/joekiller/ratpack-bubblesort-service/tarball/master"
             },
             "commands": {
               "buildjar": {
