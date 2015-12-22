@@ -27,3 +27,8 @@ Once the service is started, the interfaces are:
     GET /stoppie
         returns final pi calculation.
         curl -X GET -H "Content-Type: application/json" -H "Cache-Control: no-cache" 'http://localhost:5050/stoppie'
+    GET /arm
+        Stops heealthcheck from working.
+        curl -X GET -H "Content-Type: application/json" -H "Cache-Control: no-cache" 'http://localhost:5050/armbomb'
+
+Shortcut: `. ./scripts/traffic.bash`

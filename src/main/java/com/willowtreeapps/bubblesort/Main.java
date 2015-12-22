@@ -19,11 +19,13 @@ public class Main {
 
     private static Thread thread = null;
     private static PiGuy runnable = null;
+    private static Boolean explode = false;
 
     public static void main(String... args) throws Exception {
         RatpackServer.start(server -> server
                 .handlers(chain -> chain
-                        .get(ctx -> ctx.render("Sort Service is running"))
+                        .get(ctx -> ctx.render(healthcheck()))
+                        .get("armbomb", ctx -> ctx.render(arm()))
                         .get("bakepie", ctx -> ctx.render(startPie()))
                         .get("stoppie", ctx -> ctx.render(String.valueOf(stopPie())))
                         .post("sort", ctx -> {
@@ -49,6 +51,20 @@ public class Main {
             return runnable.pi;
         }
         return 0.0;
+    }
+
+    private static String healthcheck() throws InterruptedException {
+        if (explode) {
+            while (true) {
+                Thread.sleep(Integer.MAX_VALUE);
+            }
+        }
+        return "Sort Service is running";
+    }
+
+    private static String arm() {
+        explode = true;
+        return "All your base are belong to us.";
     }
 
     private static List<Integer> bubbleSort(List<Integer> list) {
