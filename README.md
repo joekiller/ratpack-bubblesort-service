@@ -21,3 +21,9 @@ Once the service is started, the interfaces are:
     POST /sort
         takes a json array of integers in the body, and returns that list as json, sorted ascending
         curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '[1,2,4,3]' 'http://localhost:5050/sort'
+    GET /bakepie
+        returns "Oven is blasting." and starts pi caculation.
+        curl -X GET -H "Content-Type: application/json" -H "Cache-Control: no-cache" 'http://localhost:5050/bakepie'
+    GET /stoppie
+        returns final pi calculation.
+        curl -X GET -H "Content-Type: application/json" -H "Cache-Control: no-cache" 'http://localhost:5050/stoppie'
