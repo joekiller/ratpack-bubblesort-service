@@ -8,11 +8,11 @@
       "ConstraintDescription": "must be the name of an existing EC2 KeyPair."
     },
     "WebServerCapacity": {
-      "Default": "2",
+      "Default": "1",
       "Description": "The initial nuber of WebServer instances",
       "Type": "Number",
       "MinValue": "1",
-      "MaxValue": "5",
+      "MaxValue": "1",
       "ConstraintDescription": "must be between 1 and 5 EC2 instances."
     },
     "InstanceType": {
@@ -533,7 +533,7 @@
           "Ref": "LaunchConfig"
         },
         "MinSize": "1",
-        "MaxSize": "5",
+        "MaxSize": "1",
         "DesiredCapacity": {
           "Ref": "WebServerCapacity"
         },
