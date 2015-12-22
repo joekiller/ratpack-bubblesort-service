@@ -460,7 +460,7 @@
       "Properties": {
         "EvaluationPeriods": "1",
         "Statistic": "Average",
-        "Threshold": "30",
+        "Threshold": "60",
         "AlarmDescription": "Alarm if CPU too high or metric disappears indicating instance is down",
         "Period": "60",
         "AlarmActions": [ { "Ref": "ScaleUpPolicy" } ],
